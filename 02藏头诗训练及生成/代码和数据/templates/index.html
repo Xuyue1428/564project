@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>藏头诗|自动生成</title>
+<link rel="stylesheet" type="text/css" href="{{static_url('style.css')}}" media="screen" />
+<script language="javascript" src="{{static_url('scripts/browserdetect_lite.js')}}" type="text/javascript"></script>
+<script language="javascript" src="{{static_url('scripts/opacity.js')}}" type="text/javascript"></script>
+<script language="javascript" src="{{static_url('scripts/jquery-2.1.1.js')}}" type="text/javascript"></script>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+
+
+<body>
+
+<div id="main_container_index">
+
+	 <div id="main_content">
+        <div id="top_menu">
+                     <ul class="menu">
+                        <li>
+             <script language="javascript" type="text/javascript">
+            od_displayImage('myImg1', src="{{static_url('images/logo.png')}}", 350,130, '', 'Variable Opacity Rules');
+            </script>
+                        </li>
+
+                    </ul>
+        </div>
+        <form action="/" method="POST"> 
+        <div id="left_menu">
+            <div> 
+                <input name="yan" type="radio" value="五言" checked="checked"/>五言
+                <input name="yan" type="radio" value="七言" />七言
+            </div>
+            <div>
+                <input name="cang" type="radio" value="藏头" checked="checked"/>藏头
+                <input name="cang" type="radio" value="藏尾"/>藏尾
+            </div>
+            <div class="search">
+                <input type="text" placeholder="请输入藏头词" name="key_words"  />
+                <button onclick="buttonClick();" ></button>
+            </div>
+        </div>
+        </form>
+
+        
+        <div id="center_content">
+
+        <form action="/" method="GET"> 
+        <h1>{{key_words}}</h1>
+            
+            <div id="poetry">
+            <p >{{poetry1[0]}}<br>{{poetry1[1]}} <br>{{poetry1[2]}}<br>{{poetry1[3]}}             
+            </p>
+            
+            </div>
+            <div id="poetry">
+            <p >{{poetry2[0]}}<br>{{poetry2[1]}} <br>{{poetry2[2]}}<br>{{poetry2[3]}}               
+            </p>
+            </div>
+            
+        <span style="float:right; font-weight:bold;"><i>自动创作</i></span>
+        </form>
+        </div>
+
+	</div>
+</div>	
+</body>
+</html>
